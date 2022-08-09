@@ -45,6 +45,33 @@ int (*select_func(char s))(va_list, flags_t *);
 /****** check for flags **********************/
 int get_flag(char s, flags_t *f);
 
+/******** print numbers *********************/
+int print_int(va_list list, flags_t *f);
+void print_number(int num);
+int print_unsigned(va_list list, flags_t *f);
+int count_digit(int i);
+
+/************ print percent *****************/
+int print_percent(va_list list, flags_t *f);
+
+/*********** print bases ******************/
+int print_hex(va_list list, flags_t *f);
+int print_octal(va_list list, flags_t *f);
+int print_hex_big(va_list list, flags_t *f);
+int print_binary(va_list list, flags_t *f);
+
+/********** print custom *******************/
+int print_bigS(va_list list, flags_t *f);
+int print_rev(va_list list, flags_t *f);
+int print_rot13(va_list list, flags_t *f);
+
+
+/*********** print address *******************/
+int print_address(va_list list, flags_t *f);
+
+/*********** print alpha ***************/
+int print_string(va_list list, flags_t *f);
+int print_char(va_list list, flags_t *f);
 
 
 #endif

@@ -31,13 +31,11 @@ typedef struct handler
 	int (*f)(va_list ap, flags_t *f);
 } ph;
 
-
 int _printf(const char *format, ...);
 
 /********* stdout functions *******************/
 int _putchar(char c);
 int _puts(char *str);
-
 
 /****** Selecting printing function*************/
 int (*select_func(char s))(va_list, flags_t *);
@@ -65,7 +63,6 @@ int print_bigS(va_list list, flags_t *f);
 int print_rev(va_list list, flags_t *f);
 int print_rot13(va_list list, flags_t *f);
 
-
 /*********** print address *******************/
 int print_address(va_list list, flags_t *f);
 
@@ -73,21 +70,4 @@ int print_address(va_list list, flags_t *f);
 int print_string(va_list list, flags_t *f);
 int print_char(va_list list, flags_t *f);
 
-
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

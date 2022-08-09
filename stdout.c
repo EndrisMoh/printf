@@ -6,7 +6,7 @@
  * @c: the character
  * Return: 1 success
  *
- * Description: _putchar will use a buffer of size 1024 to call write fuction
+ * Description: _putchar will use a buffer of size 1024 to call write function
  */
 
 int _putchar(char c)

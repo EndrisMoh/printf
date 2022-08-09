@@ -4,46 +4,48 @@
 
 /**
  * _printf - prints to std output according to
- * format. 
+ * format.
  * @format: the format specifier
  * Return: number of characters printed
  */
 
 int _printf(const char *format, ...)
 {
-	va_list list;
-	int i;
-	int *ptr;
+	va_list vaList;
+	const char *ptr;
+	int (*pfunc)(va_list, flags_t *);
+	flags_t flags = {0, 0, 0};
 
-	flag_f flags = {0, 0, 0};
-	
-	if (!format ||(format[0] == '%' && !format[1]))
+	register int count = 0;
+
+	va_start(vaList, format);
+
+
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-
-	if (format[0] == '%' && format[1] == ' ')
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	
-
-
-
-
-
-
-
-
-	va_start(list, format);
-
-	for (i = 0; format; i++)
+	for (ptr = format; *ptr; ptr++)
 	{
-		if (flag->f1 != '%')
-			print;
-		else
+		if (*ptr == '%')
 		{
-		_putchar(va_arg(list, format));
+			ptr++;
+			if (*ptr == '%')
+			{
+				count += _putchar('%');
+				continue;
+			}
+			while (get_flag(*ptr, &flags))
+				ptr++;
+			pfunc = select_func(*ptr);
+			count += (pfunc)
+				? pfunc(vaList, &flags)
+				: _printf("%%%c", *ptr);
 		}
+		else
+			count += _putchar(*ptr);
 	}
-
-	va_end(list);
-
-
-
+	_putchar(-1);
+	va_end(vaList);
+	return (count);
+}

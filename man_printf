@@ -1,0 +1,80 @@
+.TH man 1 "10 August 2022" "ALX PRINTF PROJECT"
+.SH NAME
+.B _printf 
+.I A function that emulates the std output printf function
+.SH SYNOPSIS
+.B #include \(dqmain.h\(dq
+.sp
+.B int _printf(const char *
+.I format
+.B , ...);
+.sp
+.B _printf
+.I FORMAT [VARIABLE ARGUMENT]
+.B ...
+.SH DESCRIPTION	
+prints the provided argument according to the specified format.
+.sp 
+.B [h] display help
+.sp
+The FORMAT controls the desired output. The supported sequence include:
+.sp
+.B b, o
+- Print a number in 
+.I binary 
+and
+.I octal base
+.sp
+.B r, R
+- Print a string in reverse and ROT13 encryption respectively
+.sp
+.B S
+- Prints a string
+.sp
+.B x, X
+- Print a number in lowercase and uppercase 
+.I hexadecimal
+base
+.sp
+.B %
+- Escape character to print %. The format string should contain \(dq%%\(dq to print \(dq%\(dq.
+.sp
+.B s
+- Print an entire
+.I string.
+.sp
+.B u
+- Prints an
+.I unsigned int.
+.sp
+.B c
+- Prints a single character
+.sp
+.B i, d
+- Print an 
+.I int
+argument. It is first converted to a decimal number
+.sp
+.SH AUTHORS
+Writen by Jared Atandi and Endris Yassin
+.SH REPORTING BUGS AND CONTRIBUTION
+Create a github pull request on the repo https://github.com/EndrisMoh/printf 
+.SH CHECK
+Standard printf for reference
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+.sp
+
+

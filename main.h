@@ -70,4 +70,8 @@ int print_address(va_list list, flags_t *f);
 int print_string(va_list list, flags_t *f);
 int print_char(va_list list, flags_t *f);
 
+/*********** convert *********************/
+char *convert(unsigned long int num, int base, int lowercase);
+
+
 #endif

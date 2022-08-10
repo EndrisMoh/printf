@@ -104,7 +104,17 @@ int print_rot13(va_list l, flags_t *f)
  */
 int print_percent(va_list l, flags_t *f)
 {
+	int i;
+	char *str = va_arg(l, char *);
+
 	(void)l;
 	(void)f;
-	return (_putchar('%'));
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == '%' && str[i + 1] == '%')
+			return (_putchar('%'));
+	}
+	return (0);
+
 }

@@ -1,6 +1,6 @@
 .TH man 1 "10 August 2022" "ALX PRINTF PROJECT"
 .SH NAME
-.B _printf 
+.B _printf
 .I A function that emulates the std output printf function
 .SH SYNOPSIS
 .B #include \(dqmain.h\(dq
@@ -12,16 +12,16 @@
 .B _printf
 .I FORMAT [VARIABLE ARGUMENT]
 .B ...
-.SH DESCRIPTION	
+.SH DESCRIPTION
 prints the provided argument according to the specified format.
-.sp 
+.sp
 .B [h] display help
 .sp
 The FORMAT controls the desired output. The supported sequence include:
 .sp
 .B b, o
-- Print a number in 
-.I binary 
+- Print a number in
+.I binary
 and
 .I octal base
 .sp
@@ -32,7 +32,7 @@ and
 - Prints a string
 .sp
 .B x, X
-- Print a number in lowercase and uppercase 
+- Print a number in lowercase and uppercase
 .I hexadecimal
 base
 .sp
@@ -51,14 +51,14 @@ base
 - Prints a single character
 .sp
 .B i, d
-- Print an 
+- Print an
 .I int
 argument. It is first converted to a decimal number
 .sp
 .SH AUTHORS
 Writen by Jared Atandi and Endris Yassin
 .SH REPORTING BUGS AND CONTRIBUTION
-Create a github pull request on the repo https://github.com/EndrisMoh/printf 
+Create a github pull request on the repo https://github.com/EndrisMoh/printf
 .SH CHECK
 Standard printf for reference
 .sp

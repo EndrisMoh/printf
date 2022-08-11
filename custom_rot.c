@@ -54,7 +54,7 @@ int print_rev(va_list l, flags_t *f)
 	if (!s)
 		s = "(null)";
 
-	while (s[i])
+	while (s[i] != '\0')
 		i++;
 
 	for (j = i - 1; j >= 0; j--)

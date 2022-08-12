@@ -20,10 +20,11 @@ int (*select_func(char s))(va_list, flags_t *)
 		{'b', print_binary},
 		{'o', print_octal},
 		{'R', print_rot13},
-		{'r', print_rev},
+		{'R', print_rev},
 		{'S', print_bigS},
 		{'p', print_address},
 		{'%', print_percent}
+		/*{'l', print_long_num}*/
 		};
 	int flags = 14;
 

@@ -4,7 +4,7 @@
 
 
 #***** compiler options with 89 standards*****
-options=gcc -Wall -Werror -Wextra -pedantic -std=gnu89
+options=gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89
 
 .PHONY: printf
 

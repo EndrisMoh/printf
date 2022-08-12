@@ -73,5 +73,7 @@ int print_char(va_list list, flags_t *f);
 /*********** convert *********************/
 char *convert(unsigned long int num, int base, int lowercase);
 
+/************* length modifiers ************/
+int print_long_num(va_list list, flags_t *f);
 
 #endif

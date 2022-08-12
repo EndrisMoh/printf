@@ -252,3 +252,10 @@ t	ptrdiff_t	ptrdiff_t					ptrdiff_t*
 L			long double				
 
 Note regarding the c specifier: it takes an int (or wint_t) as argument, but performs the proper conversion to a char value (or a wchar_t) before formatting it for output.
+
+Authors
+
+Endris Mohammed @EndrisMoh
+and
+Jared Keago @jaredatandi
+//

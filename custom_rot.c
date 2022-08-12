@@ -113,7 +113,7 @@ int print_percent(va_list list, flags_t *f)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		/*if (str[i] == '%' && str[i + 1] == '%')*/
-			return (_putchar('%'));
+		return (_putchar('%'));
 	}
 	return (0);
 

@@ -106,7 +106,7 @@ This code will be compiled this way:
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
-<
+	<
 user@ubuntu:~/c/printf$ cat main.c 
 
 #include <limits.h>
@@ -153,7 +153,7 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
-
+	
 user@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
 user@ubuntu:~/c/printf$ ./printf
 Let's try to printf a simple sentence.
@@ -255,10 +255,10 @@ Note regarding the c specifier: it takes an int (or wint_t) as argument, but per
 
 Authors
 
-Endris Mohammed @EndrisMoh.
+Endris Mohammed @EndrisMoh
 
-and.
+and
 
-Jared Keago @jaredatandi.
+Jared Keago @jaredatandi
 
 ~~

@@ -91,12 +91,13 @@ _printf.c
 Own printf  function that performs formated output conversion and print data.
 
 
-#  main.h
+  main.h
 
 Header file where all prototypes are saved.
 
 
-#  Compilation & Testing
+  Compilation & Testing
+
 
 This code will be compiled this way:
 

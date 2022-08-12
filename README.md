@@ -255,7 +255,10 @@ Note regarding the c specifier: it takes an int (or wint_t) as argument, but per
 
 Authors
 
-Endris Mohammed @EndrisMoh
-and
-Jared Keago @jaredatandi
-//
+Endris Mohammed @EndrisMoh.
+
+and.
+
+Jared Keago @jaredatandi.
+
+~~

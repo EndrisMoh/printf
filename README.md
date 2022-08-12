@@ -37,7 +37,7 @@ Flags	Description	Specifiers
 
 (space)		Prints a blank space if the argument is a positive number	i, d
 
-(#) 	Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero	o, x, X
+(#) Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero o, x, X
 
 
 Length	Description	Specifiers

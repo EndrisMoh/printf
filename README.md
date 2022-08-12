@@ -34,7 +34,9 @@ S	String with special chars replaced by their ASCII value
 Flags	Description	Specifiers
 
 +	Prints a plus sign (+) when the argument is a positive number. In other case, prints a minus sign (-).	i, d
-(space)	Prints a blank space if the argument is a positive number	i, d
+
+(space)		Prints a blank space if the argument is a positive number	i, d
+
 (#) 	Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero	o, x, X
 
 
@@ -104,7 +106,7 @@ This code will be compiled this way:
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
-
+<
 user@ubuntu:~/c/printf$ cat main.c 
 
 #include <limits.h>
@@ -179,3 +181,4 @@ Len:[12]
 Unknown:[%r]
 Unknown:[%r]
 user@ubuntu:~/c/printf$
+>

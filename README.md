@@ -1,5 +1,5 @@
 # 0x11. C-Printf
-''''''''''''''''
+
 
 The printf project is a collaboration between Endris Mohammed and Jared Keago, actual students of Software Engineering at ALX School, were a function named "_printf" imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
 
@@ -35,7 +35,8 @@ Flags	Description	Specifiers
 
 +	Prints a plus sign (+) when the argument is a positive number. In other case, prints a minus sign (-).	i, d
 (space)	Prints a blank space if the argument is a positive number	i, d
-#	Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero	o, x, X
+(#) 	Prints 0, 0x and 0X for o, x and X specifiers, respectively. It doesn't print anything if the argument is zero	o, x, X
+
 
 Length	Description	Specifiers
 
@@ -90,7 +91,90 @@ _printf.c
 Own printf  function that performs formated output conversion and print data.
 
 
-main.h
+#  main.h
 
 Header file where all prototypes are saved.
 
+
+#  Compilation & Testing
+
+This code will be compiled this way:
+
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+
+You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
+
+user@ubuntu:~/c/printf$ cat main.c 
+
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    int len;
+    int len2;
+    unsigned int ui;
+    void *addr;
+
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
+    return (0);
+}
+
+user@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+user@ubuntu:~/c/printf$ ./printf
+Let's try to printf a simple sentence.
+Let's try to printf a simple sentence.
+ength:[39, 39]
+Length:[39, 39]
+Negative:[-762534]
+Negative:[-762534]
+Unsigned:[2147484671]
+Unsigned:[2147484671]
+Unsigned octal:[20000001777]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Unsigned hexadecimal:[800003ff, 800003FF]
+Character:[H]
+Character:[H]
+String:[I am a string !]
+String:[I am a string !]
+Address:[0x7ffe637541f0]
+Address:[0x7ffe637541f0]
+Percent:[%]
+Percent:[%]
+Len:[12]
+Len:[12]
+Unknown:[%r]
+Unknown:[%r]
+user@ubuntu:~/c/printf$
